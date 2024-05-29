@@ -3,6 +3,7 @@ package functions
 import (
 	"os"
 	"testing"
+	"math-skills/functions"
 )
 
 // TestReadNumbers tests the ReadNumbers function.
@@ -31,7 +32,7 @@ func TestReadNumbers(t *testing.T) {
 	expected := []float64{1.0, 2.0, 3.0, 4.0, 5.0}
 
 	// Call the ReadNumbers function with the temporary file path
-	result, err := ReadNumbers(tmpfile.Name())
+	result, err := functions.ReadNumbers(tmpfile.Name())
 	if err != nil {
 		t.Fatalf("Error reading numbers: %v", err)
 	}

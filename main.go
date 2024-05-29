@@ -12,7 +12,8 @@ import (
 func main() {
 	// Ensure the file path is provided as an argument
 	if len(os.Args) != 2 {
-		log.Fatalf("provide extra argument")
+		fmt.Println("Incorrect number of  Arguments")
+		log.Fatalf("usage: go run main.go data.txt")
 	}
 
 	// Read data from the file
